@@ -1,18 +1,20 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import loginButton from "@/components/WhiteButtonOutline.vue"
+import loginButton from "@/components/WhiteButtonOutline.vue";
 const items = [{ to: "/", name: "Home" }];
 </script>
 
 <style scoped>
-    .navbar {
-        background-color: var(--blue-color) !important;
-    }
+.navbar {
+  background-color: var(--blue-color) !important;
+}
 </style>
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold hoverable" id="userName" href="#">Pengaduan Masyarakat</a>
+      <a class="navbar-brand fw-bold hoverable fst-italic" id="userName" href="#"
+        >Pengaduan Masyarakat</a
+      >
       <button
         class="navbar-toggler hoverable"
         type="button"
@@ -36,7 +38,7 @@ const items = [{ to: "/", name: "Home" }];
             <a class="nav-link hoverable" href="#layanan">Daftar</a>
           </li>
           <li class="nav-item active">
-              <loginButton text="Masuk" icon="fa-solid fa-arrow-right-to-bracket" />
+            <loginButton text="Masuk" icon="fa-solid fa-arrow-right-to-bracket" />
           </li>
         </ul>
       </div>
