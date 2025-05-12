@@ -1,10 +1,14 @@
 <script>
 import BlackButtonOutline from "@/components/BlackButtonOutline.vue";
 import BlueButton from "../components/BlueButton.vue";
+import Tentang from "../views/Tentang.vue";
+
 export default {
   components: {
     BlueButton,
     BlackButtonOutline,
+    Tentang
+   
   },
 };
 </script>
@@ -120,5 +124,9 @@ export default {
         </div>
       </div>
     </div>
+  
   </section>
+  <Tentang />
+  
+ 
 </template>
