@@ -1,14 +1,15 @@
 <template>
-    <div class="container justify-content-center d-flex flex-row">
+
+
         <div class="con-card card shadow-sm h-100">
-            <div class="card-body text-start">
-                <h5 class="card-title text-white text-center fw-bold">
-                    {{ judul }}
-                </h5>
-                <p class="card-text text-start text-white">{{ deskripsi }}</p>
+            <div class="card-body bg-blue text-start">
+                
+                <h5 class="card-title text-white text-center fw-bold">{{ judul }}</h5>
+                <p class="card-text text-center fw-light my-3 text-white">{{ deskripsi }}</p>
+                
             </div>
         </div>
-    </div>
+    
 </template>
 
 <script>
@@ -24,29 +25,26 @@ export default {
 <style scoped>
 .card-title {
     font-weight: 900px;
-    font-size: 18px;
+    font-size: 24px;
     letter-spacing: 4%;
-    margin-top: 5px;
+    margin-top: 2px;
     margin-bottom: 5px;
 }
 
-.card-logo {
-    font-size: 18px;
-}
 
 .card-body {
+    height: 300px;
+    width: 620px;
     padding: 38px 38px;
+    border-radius: 29px
 }
-
-.con-card {
-    width: 310px;
-    height: 232px !important;
+.con-card{
     border-radius: 29px;
-    background-color: #4b70f5;
-}
+    width: 620px !important;
 
+}
 .card-text {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 150%;
     letter-spacing: 0% !important;
     margin-bottom: 30px !important;

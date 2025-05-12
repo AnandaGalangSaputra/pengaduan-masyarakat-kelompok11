@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-    <section class="vh-100 bg-grey py-5">
+    <section class="h-100 bg-grey py-5">
         <div class="container h-100">
             <div class="align-items-center justify-content-center">
                 <div>

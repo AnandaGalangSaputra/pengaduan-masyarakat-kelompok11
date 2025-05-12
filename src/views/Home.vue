@@ -5,6 +5,7 @@ import Tentang from "../views/Tentang.vue";
 
 import Langkah  from "../views/Langkah.vue";
 import Adakendala from "../views/Adakendala.vue";
+import Berita  from "../views/Berita.vue";
 
 
 
@@ -16,7 +17,7 @@ export default {
     BlueButton,
     BlackButtonOutline,
     Tentang,
-
+    Berita,
     Langkah,
    Adakendala,
 
@@ -143,6 +144,7 @@ export default {
   <Jenis />
 
   <Langkah />
+  <Berita />
   <Adakendala />
 
   
