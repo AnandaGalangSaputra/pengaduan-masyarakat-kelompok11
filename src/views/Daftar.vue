@@ -5,10 +5,21 @@
             class="container vh-100 d-flex justify-content-center align-items-center back-form"
         >
             <div class="row d-flex justify-content-center align-items-center">
-                <h1 class="title mb-4 text-center">Masuk</h1>
+                <h1 class="title mb-4 text-center">Daftar</h1>
 
                 <div class="w-100 px-4" style="max-width: 400px">
-                    <div class="mb-3">
+                    <div class="mb-2">
+                        <label class="form-label nav-color fw-semibold"
+                            >No Telp</label
+                        >
+                        <input
+                            type="text"
+                            class="form-control bg-light"
+                            placeholder="Masukkan nomor anda"
+                            v-model="username"
+                        />
+                    </div>
+                    <div class="mb-2">
                         <label class="form-label nav-color fw-semibold"
                             >Username</label
                         >
@@ -46,28 +57,43 @@
                             </span>
                         </div>
                     </div>
-
-                    <div class="mb-3 text-end">
-                        <a
-                            href="#"
-                            class="text-decoration-none blue-color fw-semibold lupa-pass"
-                            ><u>Lupa Password?</u></a
+                    <div class="mb-2">
+                        <label class="form-label nav-color fw-semibold"
+                            >Password</label
                         >
+                        <div class="input-group">
+                            <input
+                                :type="showPassword ? 'text' : 'password'"
+                                class="form-control bg-light"
+                                placeholder="Masukkan ulang password anda"
+                                v-model="password"
+                            />
+                            <span
+                                class="input-group-text bg-light"
+                                @click="togglePassword"
+                                style="cursor: pointer"
+                            >
+                                <i
+                                    :class="
+                                        showPassword
+                                            ? 'bi bi-eye-slash'
+                                            : 'bi bi-eye'
+                                    "
+                                ></i>
+                            </span>
+                        </div>
                     </div>
-                    <BlueButton
+                    <div class="pt-4 text-end">
+                        <BlueButton
                         text="Masuk"
                         class="button-blue"
                     />
-                    <div class="text-center mt-2">
-                        <a
-                            href="#"
-                            class="text-decoration-none blue-color fw-semibold lupa-pass"
-                            ><u>Saya belum memiliki akun</u></a
-                        >
                     </div>
-                    <p class="text-center text-decoration-none blue-color fw-semibold lupa-pass mt-1">atau</p>
+                    
+                    
+                    <p class="text-center text-decoration-none blue-color fw-semibold lupa-pass mt-3">atau</p>
                     <div class="d-flex justify-content-center my-1">
-                        <img src="../assets/Google.png" alt="" class="img-container gambar">
+                        <img src="../assets/SignUp.png" alt="" class="img-container gambar">
                     </div>
                     
                 </div>
@@ -80,14 +106,16 @@
 .bgr-gambar {
     background-image: url("../assets/Images/bgindo.png");
     background-size: 100%;
-    padding-top: 100px;
+    padding-bottom: 840px;
 }
 
 .back-form {
     background-image: url("../assets/Images/texture.png");
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
+
+
 
 .lupa-pass {
     font-size: 14px;

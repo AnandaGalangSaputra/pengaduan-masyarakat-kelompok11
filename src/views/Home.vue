@@ -9,7 +9,7 @@ import Berita from "../views/Berita.vue";
 import Foot from "../views/Footer.vue";
 import Unggahbukti from "../views/Unggahbukti.vue";
 import Login from "../views/Login.vue";
-
+import Daftar from "../views/Daftar.vue";
 import Jenis from "../views/Jenis.vue";
 
 export default {
@@ -23,7 +23,8 @@ export default {
         Foot,
         Unggahbukti,
         Login,
-        Jenis,
+        Daftar,
+        Jenis
     },
 };
 </script>
@@ -145,6 +146,7 @@ export default {
         </div>
     </section>
     <Login/>
+    <Daftar/>
     <Tentang />
     <Jenis />
 

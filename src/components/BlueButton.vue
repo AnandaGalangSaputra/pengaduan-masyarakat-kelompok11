@@ -2,13 +2,14 @@
 
   .button-blue {
     padding: 1rem 2rem ;
+    background-color: var(--blue-color);
   }
 
 </style>
 
 <template>
     <a
-        class="button-blue btn btn-primary btn-lg hoverable me-2 bg-primary-color"
+        class="button-blue btn btn-lg hoverable me-2 text-white"
         
     >
         <span :class="{ '': icon }">{{ text }}</span>
