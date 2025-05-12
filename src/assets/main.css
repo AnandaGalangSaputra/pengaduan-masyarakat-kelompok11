@@ -14,7 +14,7 @@ body {
 :root {
  --blue-color : #4B70F5;
  --bg-blue : #4B70F5;
-
+ --nav-color : #4C3BCF;
  --grey-color : #EAEAEA;
 }
 
@@ -29,6 +29,10 @@ body {
 .bg-grey{
   background-color: var(--grey-color);
 
+}
+
+.nav-color {
+  color: var(--nav-color);
 }
 
 

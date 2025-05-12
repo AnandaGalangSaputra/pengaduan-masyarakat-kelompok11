@@ -6,7 +6,7 @@ const items = [{ to: "/", name: "Home" }];
 
 <style scoped>
 .navbar {
-  background-color: var(--blue-color) !important;
+  background-color: var(--nav-color) !important;
 }
 </style>
 <template>

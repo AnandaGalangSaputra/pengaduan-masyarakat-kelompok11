@@ -52,18 +52,21 @@ export default {
         <div class="container h-100 my-5">
             <div class="row justify-content-center">
                 <div class="con-card d-flex flex-row justify-content-center">
+                  <div class="row">
+
                     <div
-                        class="col-md-3 mb-4"
-                        v-for="(layanan, index) in layananList"
-                        :key="index"
+                    class="col-md-3 mb-4"
+                    v-for="(layanan, index) in layananList"
+                    :key="index"
                     >
-                        <BlueCard
-                            :nomor="layanan.nomor"
-                            :judul="layanan.judul"
-                            :deskripsi="layanan.deskripsi"
-                            class="blu"
-                        />
-                    </div>
+                    <BlueCard
+                    :nomor="layanan.nomor"
+                    :judul="layanan.judul"
+                    :deskripsi="layanan.deskripsi"
+                    class="blu"
+                    />
+                  </div>
+                </div>
                 </div>
             </div>
         </div>

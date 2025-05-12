@@ -30,30 +30,30 @@ export default {
 
 <template>
     <section class="h-100 bg-grey py-5">
-        <div class="container h-100">
-            <div class="align-items-center justify-content-center">
-                <div>
-                    <h2 class="hero-h2 text-center blue-color">
-                        TENTANG <br />
-                    </h2>
-                    <h1 class="hero-h1 text-center blue-color">LAYANAN</h1>
-                    <p class="mx-auto text-center" style="margin-bottom: 80px;">
-                        Platform pengaduan masyarakat digital yang cepat,
-                        transparan, dan <br />
-                        mudah diakses oleh semua warga.
-                    </p>
-                </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <div>
+                <h2 class="hero-h2 text-center blue-color">TENTANG <br /></h2>
+                <h1 class="hero-h1 text-center blue-color">LAYANAN</h1>
+                <p class="mx-auto text-center" style="margin-bottom: 80px">
+                    Platform pengaduan masyarakat digital yang cepat,
+                    transparan, dan <br />
+                    mudah diakses oleh semua warga.
+                </p>
             </div>
+        </div>
+        <div class="container h-100 justify-content-center">
             <div class="con-card d-flex flex-row justify-content-center">
-                <div
-                    class="col-md-4 mb-4"
-                    v-for="(layanan, index) in layananList"
-                    :key="index"
-                >
-                    <Card
-                        :judul="layanan.judul"
-                        :deskripsi="layanan.deskripsi"
-                    />
+                <div class="row">
+                    <div
+                        class="col-md-4 mb-4"
+                        v-for="(layanan, index) in layananList"
+                        :key="index"
+                    >
+                        <Card
+                            :judul="layanan.judul"
+                            :deskripsi="layanan.deskripsi"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,5 +76,4 @@ export default {
 .con-card {
     gap: 32px;
 }
-
 </style>
