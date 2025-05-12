@@ -1,11 +1,12 @@
 <template>
-    <div class="container justify-content-center d-flex flex-row">
-        <div class="con-card card shadow-sm h-100">
-            <div class="card-body text-start">
-                <h5 class="card-title text-white text-center fw-bold">
-                    {{ judul }}
-                </h5>
-                <p class="card-text text-start text-white">{{ deskripsi }}</p>
+    <div class="card h-100 text-white p-3">
+        <div class="my-3 mx-3 d-flex">
+            <h1 class="display-4 fw-bold me-3">{{ nomor }}</h1>
+            <div>
+                <h5 class="fw-bold">{{ judul }}</h5>
+                <p class="mb-0" style="font-size: 0.95rem">
+                    {{ deskripsi }}
+                </p>
             </div>
         </div>
     </div>
@@ -17,38 +18,16 @@ export default {
     props: {
         judul: String,
         deskripsi: String,
+        nomor: String,
     },
 };
 </script>
 
 <style scoped>
-.card-title {
-    font-weight: 900px;
-    font-size: 18px;
-    letter-spacing: 4%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.card-logo {
-    font-size: 18px;
-}
-
-.card-body {
-    padding: 38px 38px;
-}
-
-.con-card {
-    width: 310px;
-    height: 232px !important;
-    border-radius: 29px;
-    background-color: #4b70f5;
-}
-
-.card-text {
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0% !important;
-    margin-bottom: 30px !important;
+.card {
+    background-color: #4a67f6;
+    border-radius: 20px;
+    max-width: 310px;
+    max-height: 232px;
 }
 </style>

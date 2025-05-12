@@ -1,11 +1,10 @@
 <script>
-import Card from "@/components/icons/Card.vue";
+
 import JenisCard from "@/components/JenisCard.vue";
 
 export default {
     name: "JenisPengaduan",
     components: {
-        Card,
         JenisCard,
     },
     data() {
