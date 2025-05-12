@@ -2,12 +2,14 @@
 import BlackButtonOutline from "@/components/BlackButtonOutline.vue";
 import BlueButton from "../components/BlueButton.vue";
 import Tentang from "../views/Tentang.vue";
+import Jenis from "../views/Jenis.vue";
 
 export default {
   components: {
     BlueButton,
     BlackButtonOutline,
-    Tentang
+    Tentang,
+    Jenis
    
   },
 };
@@ -127,6 +129,7 @@ export default {
   
   </section>
   <Tentang />
+  <Jenis />
   
  
 </template>

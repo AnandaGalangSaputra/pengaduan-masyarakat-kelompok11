@@ -13,11 +13,17 @@ body {
 
 :root {
  --blue-color : #4B70F5;
+ --bg-blue : #4B70F5;
+
  --grey-color : #EAEAEA;
 }
 
 .blue-color{
  color: var(--blue-color); 
+}
+
+.bg-blue{
+  background-color: var(--bg-blue);
 }
 
 .bg-grey{

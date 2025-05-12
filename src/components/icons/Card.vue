@@ -15,6 +15,7 @@ export default {
         judul: String,
         deskripsi: String,
     },
+    
 };
 </script>
 
@@ -48,3 +49,4 @@ export default {
     margin-bottom: 30px !important;
 }
 </style>
+
