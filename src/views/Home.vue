@@ -3,14 +3,18 @@ import BlackButtonOutline from "@/components/BlackButtonOutline.vue";
 import BlueButton from "../components/BlueButton.vue";
 import Tentang from "../views/Tentang.vue";
 import Langkah  from "../views/Langkah.vue";
+import Adakendala from "../views/Adakendala.vue";
+
+
 
 export default {
   components: {
     BlueButton,
     BlackButtonOutline,
     Tentang,
-    Langkah
-   
+
+    Langkah,
+   Adakendala
   },
 };
 </script>
@@ -129,8 +133,8 @@ export default {
   
   </section>
   <Tentang />
-  
   <Langkah />
+  <Adakendala />
   
  
 </template>
