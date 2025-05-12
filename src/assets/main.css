@@ -1,21 +1,30 @@
+
 * {
     font-family: 'Poppins', sans-serif !important;
+
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    
 }
 
 :root {
- --blue-color : #4B70F5
+ --blue-color : #4B70F5;
+ --grey-color : #EAEAEA;
 }
 
 .blue-color{
  color: var(--blue-color); 
 }
+
+.bg-grey{
+  background-color: var(--grey-color);
+
+}
+
 
 .vh-100 {
     height: 100vh;

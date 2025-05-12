@@ -1,10 +1,16 @@
 <script>
 import BlackButtonOutline from "@/components/BlackButtonOutline.vue";
 import BlueButton from "../components/BlueButton.vue";
+import Tentang from "../views/Tentang.vue";
+import Adakendala from "../views/Adakendala.vue"
+
+
 export default {
   components: {
     BlueButton,
     BlackButtonOutline,
+    Tentang,
+    Adakendala
   },
 };
 </script>
@@ -120,5 +126,12 @@ export default {
         </div>
       </div>
     </div>
+  
   </section>
+  <Tentang />
+  <Adakendala>
+
+  </Adakendala>
+  
+ 
 </template>
