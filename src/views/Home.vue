@@ -7,6 +7,8 @@ import Langkah from "../views/Langkah.vue";
 import Adakendala from "../views/Adakendala.vue";
 import Berita from "../views/Berita.vue";
 import Foot from "../views/Footer.vue";
+import Unggahbukti from "../views/Unggahbukti.vue";
+import Login from "../views/Login.vue";
 
 import Jenis from "../views/Jenis.vue";
 
@@ -19,7 +21,8 @@ export default {
         Langkah,
         Adakendala,
         Foot,
-
+        Unggahbukti,
+        Login,
         Jenis,
     },
 };
@@ -141,6 +144,7 @@ export default {
             </div>
         </div>
     </section>
+    <Login/>
     <Tentang />
     <Jenis />
 
