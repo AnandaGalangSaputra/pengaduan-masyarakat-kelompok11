@@ -2,12 +2,14 @@
 import BlackButtonOutline from "@/components/BlackButtonOutline.vue";
 import BlueButton from "../components/BlueButton.vue";
 import Tentang from "../views/Tentang.vue";
+import Langkah  from "../views/Langkah.vue";
 
 export default {
   components: {
     BlueButton,
     BlackButtonOutline,
-    Tentang
+    Tentang,
+    Langkah
    
   },
 };
@@ -127,6 +129,8 @@ export default {
   
   </section>
   <Tentang />
+  
+  <Langkah />
   
  
 </template>
