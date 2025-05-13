@@ -1,8 +1,8 @@
 <template>
-    <div class="con-card card shadow-sm h-100">
+    <div class="con-card card shadow-lg  h-100">
         <div class="card-body text-start">
             <p class="card-logo fw-bold mb-4">LOGO</p>
-            <h5 class="card-title text-primary fw-bold">{{ judul }}</h5>
+            <h5 class="card-title fw-bold">{{ judul }}</h5>
             <p class="card-text text-muted">{{ deskripsi }}</p>
         </div>
     </div>
@@ -30,6 +30,7 @@ export default {
 
 .card-logo {
     font-size: 18px;
+    color: black;
 }
 
 .card-body {

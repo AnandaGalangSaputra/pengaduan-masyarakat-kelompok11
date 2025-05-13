@@ -4,6 +4,10 @@
     padding: 1rem 2rem ;
     background-color: var(--blue-color);
   }
+  .button-blue:hover {
+        background-color: var(--blue-color);
+
+  }
 
 </style>
 

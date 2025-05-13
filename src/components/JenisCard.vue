@@ -1,8 +1,8 @@
 <template>
 
 
-        <div class="con-card card shadow-sm h-100">
-            <div class="card-body bg-blue text-start">
+        <div class="con-card card h-100">
+            <div class="card-body shadow-lg bg-blue text-start">
                 
                 <h5 class="card-title text-white text-center fw-bold">{{ judul }}</h5>
                 <p class="card-text text-center fw-light my-3 text-white">{{ deskripsi }}</p>
@@ -36,7 +36,7 @@ export default {
     height: 300px;
     width: 620px;
     padding: 38px 38px;
-    border-radius: 29px
+    border-radius: 29px;
 }
 .con-card{
     border-radius: 29px;

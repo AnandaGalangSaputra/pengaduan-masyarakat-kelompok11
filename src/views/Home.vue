@@ -60,6 +60,10 @@ export default {
     line-height: 1.5;
 }
 
+.button-black:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
 .button-blue {
     transition: all 0.3s ease-in-out;
     position: relative;
@@ -126,7 +130,7 @@ export default {
                     />
                     <BlackButtonOutline
                         text="Buat Laporan"
-                        class="ms-4"
+                        class="ms-4 button-black"
                         icon="far fa-hand-pointer"
                     />
                 </div>

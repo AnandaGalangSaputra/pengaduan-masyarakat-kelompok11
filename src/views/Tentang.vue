@@ -52,6 +52,7 @@ export default {
                         <Card
                             :judul="layanan.judul"
                             :deskripsi="layanan.deskripsi"
+                            class="kartu-tentang"
                         />
                     </div>
                 </div>
@@ -71,6 +72,10 @@ export default {
     font-weight: 900;
     letter-spacing: -2%;
     margin-bottom: 40px;
+}
+
+.kartu-tentang {
+    color: var(--blue-color);
 }
 
 .con-card {
