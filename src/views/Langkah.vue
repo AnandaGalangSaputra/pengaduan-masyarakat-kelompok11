@@ -44,7 +44,7 @@ export default {
 </script>
 
 <template>
-    <section class="py-5 my-5 bg-grey">
+    <section class="py-5">
         <h2 class="text-title text-center fw-bold py-5 text-primary">
             Langkah Pengaduan
         </h2>
@@ -52,10 +52,9 @@ export default {
         <div class="container h-100 my-5">
             <div class="row justify-content-center">
                 <div class="con-card d-flex flex-row justify-content-center">
-                  <div class="row">
-
+                  <div class="d-flex flex-column gap-4 flex-md-row justify-content-center">
                     <div
-                    class="col-md-3 mb-4"
+                    class=""
                     v-for="(layanan, index) in layananList"
                     :key="index"
                     >

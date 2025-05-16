@@ -1,57 +1,58 @@
 <script>
 import BlueButton from "../components/BlueButton.vue";
 export default {
-    components: {
-        BlueButton,
+  components: {
+    BlueButton,
+  },
+  name: "ReportIssuePage",
+  methods: {
+    goToForm() {
+      this.$router.push("/form-pengaduan");
     },
-    name: "ReportIssuePage",
-    methods: {
-        goToForm() {
-            this.$router.push("/form-pengaduan");
-        },
-    },
+  },
 };
 </script>
 <template>
-    <section class="h-100 bg-grey">
-        <div class="container d-flex flex-row py-5">
-            <div class="col-md-6">
-                <div class="report-page">
-                    <div class="content">
-                        <h1 class="title">
-                            Ada Kendala?<br />Laporkan<br />Sekarang!
-                        </h1>
-                        <p class="description">
-                            Klik tombol di bawah untuk mengisi formulir
-                            pengaduan. Laporan anda kami terima dan kami
-                            teruskan ke pada pihak yang berwajib
-                        </p>
-                        <BlueButton
-                            text="Laporkan disini"
-                            class="button-blue"
-                            icon="fa fa-arrow-right"
-                        />
+    <section class="min-vh-100 bg-grey d-flex align-items-center">
+        <div class="container">
+            <div class="row p-sm-5 p-md-5">
+                <div class="col-lg-6 col-md-12 col-sm-12 mb-4 mb-lg-0">
+                    <div class="report-page">
+                        <div class="content text-center text-lg-start">
+                            <h1 class="title">Ada Kendala?<br />Laporkan<br />Sekarang!</h1>
+                            <p class="description">
+                                Klik tombol di bawah untuk mengisi formulir pengaduan. Laporan anda kami
+                                terima dan kami teruskan ke pada pihak yang berwajib
+                            </p>
+                            <BlueButton
+                                text="Laporkan disini"
+                                class="button-blue"
+                                icon="fa fa-arrow-right"
+                                @click="goToForm"
+                            />
+                        </div>
                     </div>
                 </div>
+                <div class="col-lg-6 col-md-12 p-sm-5 d-flex align-items-center justify-content-center image-right">
+                    <img 
+                        src="../assets/Images/customersuport.png" 
+                        alt="Customer Support" 
+                        class="img-container img-fluid"
+                    />
+                </div>
             </div>
-               <div class="container d-flex flex row justify-content-center align-items-center">
-                <img src="../assets/Images/customersuport.png" alt="" class="img-container">
-                
-               </div>
-                
         </div>
     </section>
 </template>
 
 <style scoped>
 .report-page {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .content {
-    max-width: 500px;
+  max-width: 500px;
 }
 
 .img-container {
@@ -59,27 +60,33 @@ export default {
   height: 408px;
 }
 .title {
-    font-size: 64px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 .description {
-    color: #555;
-    margin-bottom: 30px;
-    font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .image-placeholder {
-    width: 300 px;
-    height: auto;
-    border-radius: 20px;
-    margin-right: 10%;
-    background-color: transparent !important;
+  /* width: 300px; */
+  height: auto;
+  border-radius: 20px;
+  margin-right: 10%;
+  background-color: transparent !important;
 }
 
 .button-blue {
-    width: 237px;
-    height: 63px;
-    font-size: 18px;
+  width: 237px;
+  height: 63px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .image-right {
+        display: none !important;
+    }
 }
 </style>

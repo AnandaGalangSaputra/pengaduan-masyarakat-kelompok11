@@ -1,6 +1,5 @@
 <template>
 
-
         <div class="con-card card shadow-sm h-100">
             <div class="card-body bg-blue text-start">
                 
@@ -33,15 +32,18 @@ export default {
 
 
 .card-body {
-    height: 300px;
-    width: 620px;
+    /* height: 300px;
+    width: 620px; */
     padding: 38px 38px;
-    border-radius: 29px
+    border-radius: 29px;
+    height: 100%;
+    width: 100%;
 }
 .con-card{
     border-radius: 29px;
-    width: 620px !important;
-
+    /* width: 620px !important; */
+    height: 100%;
+    width: 100%;
 }
 .card-text {
     font-size: 24px;

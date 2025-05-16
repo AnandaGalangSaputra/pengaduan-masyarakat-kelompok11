@@ -9,15 +9,16 @@ export default {
 </script>
 
 <template>
-    <section class="bg-blue">
-        <div class="container d-flex justify-content-center">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-12">
-                    <h1 class="text-judul text-white text-center">
+    <section id="footer" class="bg-blue min-vh-100 d-flex align-items-center">
+        <img class="wavy-element" src="../assets/wavy-element.svg" alt="">
+        <div class="container">
+            <div class="row d-flex justify-content-around align-items-start ">
+                <div class="col-md-12 d-flex flex-column justify-content-center align-items-center text-center">
+                    <h1 class="text-judul text-white ">
                         Laporkan Pengaduan <br />
                         Anda Sekarang
                     </h1>
-                    <p class="text-white text-center">
+                    <p class="text-white pt-5">
                         Isilah form di bawah ini dengan informasi yang jelas dan
                         lengkap agar laporan Anda <br />
                         bisa segera diproses.
@@ -28,9 +29,6 @@ export default {
                         icon="fa fa-arrow-right"
                     />
                 </div>
-                
-                    
-               
             </div>
         </div>
     </section>
@@ -40,11 +38,23 @@ export default {
 .text-judul {
     font-weight: bold !important;
     font-size: 60px;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 .button-blue {
-    width: 350px;
+    z-index: 1;
     background-color: var(--nav-color);
+}
+
+#footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.wavy-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 </style>

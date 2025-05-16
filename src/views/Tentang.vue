@@ -12,15 +12,18 @@ export default {
                     judul: "Akses untuk Semua",
                     deskripsi:
                         "Setiap warga bisa menyampaikan aduan tanpa hambatan.",
+                    logo :"fa-solid fa-user"
                 },
                 {
                     judul: "Privasi Terjamin",
                     deskripsi: "Data dan identitas pelapor dijaga dengan baik.",
+                    logo :"fa-solid fa-shield-halved"
                 },
                 {
                     judul: "Pantau Aduan",
                     deskripsi:
                         "Lacak status pengaduan secara real-time dari dashboard.",
+                    logo :"fa-solid fa-eye"
                 },
             ],
         };
@@ -30,28 +33,31 @@ export default {
 
 <template>
     <section class="h-100 bg-grey py-5">
-        <div class="d-flex align-items-center justify-content-center">
-            <div>
-                <h2 class="hero-h2 text-center blue-color">TENTANG <br /></h2>
-                <h1 class="hero-h1 text-center blue-color">LAYANAN</h1>
-                <p class="mx-auto text-center" style="margin-bottom: 80px">
-                    Platform pengaduan masyarakat digital yang cepat,
-                    transparan, dan <br />
-                    mudah diakses oleh semua warga.
-                </p>
+        <div class="container min-vh-100">
+            <div class="align-items-center justify-content-center">
+                <div>
+                    <h2 class="hero-h2 text-center blue-color">
+                        TENTANG <br />
+                    </h2>
+                    <h1 class="hero-h1 text-center blue-color">LAYANAN</h1>
+                    <p class="mx-auto text-center" style="margin-bottom: 80px;">
+                        Platform pengaduan masyarakat digital yang cepat,
+                        transparan, dan <br />
+                        mudah diakses oleh semua warga.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="container h-100 justify-content-center">
-            <div class="con-card d-flex flex-row justify-content-center">
-                <div class="row">
+            <div class="">
+                <div class="d-flex flex-column gap-4 flex-md-row justify-content-center">
                     <div
-                        class="col-md-4 mb-4"
+                        class=""
                         v-for="(layanan, index) in layananList"
                         :key="index"
                     >
                         <Card
                             :judul="layanan.judul"
                             :deskripsi="layanan.deskripsi"
+                            :logo="layanan.logo"
                         />
                     </div>
                 </div>
@@ -73,7 +79,8 @@ export default {
     margin-bottom: 40px;
 }
 
-.con-card {
-    gap: 32px;
+.row {
+    align-items: stretch !important;
 }
+
 </style>

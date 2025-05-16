@@ -2,15 +2,45 @@
 import { RouterLink, RouterView } from "vue-router";
 import loginButton from "@/components/WhiteButtonOutline.vue";
 const items = [{ to: "/", name: "Home" }];
+
+import { ref, onMounted } from "vue";
+
+const lastScrollPosition = ref(0);
+const isNavbarVisible = ref(true);
+const navbar = ref(null);
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScrollPosition < 0) {
+      return;
+    }
+    
+    if (Math.abs(currentScrollPosition - lastScrollPosition.value) < 60) {
+      return;
+    }
+
+    isNavbarVisible.value = currentScrollPosition < lastScrollPosition.value;
+    lastScrollPosition.value = currentScrollPosition;
+
+    navbar.value = document.getElementById('navbar');
+    if (navbar.value) {
+      navbar.value.style.transform = isNavbarVisible.value ? 'translateY(0)' : 'translateY(-100%)';
+      navbar.value.style.transition = 'transform 0.8s';
+    }
+  });
+});
 </script>
 
 <style scoped>
 .navbar {
   background-color: var(--nav-color) !important;
 }
+
 </style>
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top" id="navbar">
     <div class="container">
       <a class="navbar-brand fw-bold hoverable fst-italic" id="userName" href="#"
         >Pengaduan Masyarakat</a

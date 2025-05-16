@@ -5,6 +5,14 @@
   border: 2px solid #ffffff;
   border-radius: 0;
 }
+
+.WhiteButtonOutline:hover {
+  color: var(--nav-color);
+  background: #ffffff;
+  border: 2px solid var(--nav-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease-in-out;
+}
 </style>
 
 <template>

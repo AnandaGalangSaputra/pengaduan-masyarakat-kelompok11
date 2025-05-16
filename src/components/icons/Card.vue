@@ -1,7 +1,9 @@
 <template>
     <div class="con-card card shadow-sm h-100">
         <div class="card-body text-start">
-            <p class="card-logo fw-bold mb-4">LOGO</p>
+            <!-- <p class="card-logo fw-bold mb-4">LOGO</p> -->
+            <!-- <i class="{{logo}}r"></i> -->
+            <i :class="logo" class="fa-2x"></i>
             <h5 class="card-title text-primary fw-bold">{{ judul }}</h5>
             <p class="card-text text-muted">{{ deskripsi }}</p>
         </div>
@@ -14,6 +16,10 @@ export default {
     props: {
         judul: String,
         deskripsi: String,
+        logo: {
+            type: String,
+            default: "",
+        },
     },
     
 };
@@ -37,8 +43,6 @@ export default {
 }
 
 .con-card {
-    width: 405px;
-    height: 402px;
     border-radius: 16px;
 }
 
