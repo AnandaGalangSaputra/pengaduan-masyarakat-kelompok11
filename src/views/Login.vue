@@ -95,8 +95,11 @@
 
 .button-blue {
     width: 100%;
-    
-   
+}
+.button-blue:hover {
+    width: 100%;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
 .gambar{
     border: solid 2px black;

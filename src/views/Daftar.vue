@@ -1,4 +1,3 @@
-
 <template>
     <section class="vh-100 bgr-gambar">
         <div
@@ -84,18 +83,21 @@
                         </div>
                     </div>
                     <div class="pt-4 text-end">
-                        <BlueButton
-                        text="Masuk"
-                        class="button-blue"
-                    />
+                        <BlueButton text="Masuk" class="button-blue" />
                     </div>
-                    
-                    
-                    <p class="text-center text-decoration-none blue-color fw-semibold lupa-pass mt-3">atau</p>
+
+                    <p
+                        class="text-center text-decoration-none blue-color fw-semibold lupa-pass mt-3"
+                    >
+                        atau
+                    </p>
                     <div class="d-flex justify-content-center my-1">
-                        <img src="../assets/SignUp.png" alt="" class="img-container gambar">
+                        <img
+                            src="../assets/SignUp.png"
+                            alt=""
+                            class="img-container gambar"
+                        />
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -115,29 +117,21 @@
     border-bottom-right-radius: 40px;
 }
 
-
-
 .lupa-pass {
     font-size: 14px;
 }
 
 .button-blue {
     width: 100%;
-    
-   
 }
-.gambar{
+.gambar {
     border: solid 2px black;
     width: 250px;
     border-radius: 50px;
-
 }
 
 .google {
-    
     border-radius: 50px;
-    
-    
 }
 .title {
     color: var(--nav-color);
@@ -147,12 +141,12 @@
 </style>
 
 <script>
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import BlueButton from '@/components/BlueButton.vue';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import BlueButton from "@/components/BlueButton.vue";
 export default {
-    components : {
-        BlueButton
+    components: {
+        BlueButton,
     },
 
     data() {

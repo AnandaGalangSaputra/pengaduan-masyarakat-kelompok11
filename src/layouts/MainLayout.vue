@@ -35,7 +35,7 @@ onMounted(() => {
 
 <style scoped>
 .navbar {
-  background-color: var(--nav-color) !important;
+    background-color: var(--nav-color) !important;
 }
 
 </style>

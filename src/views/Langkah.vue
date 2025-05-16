@@ -62,7 +62,7 @@ export default {
                     :nomor="layanan.nomor"
                     :judul="layanan.judul"
                     :deskripsi="layanan.deskripsi"
-                    class="blu"
+                    class="blu shadow-lg"
                     />
                   </div>
                 </div>

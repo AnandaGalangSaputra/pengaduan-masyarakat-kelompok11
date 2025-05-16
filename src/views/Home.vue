@@ -79,6 +79,14 @@ export default {
   font-weight: 400;
   line-height: 1.5;
 }
+<<<<<<< HEAD
+=======
+
+.button-black:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+>>>>>>> ef7f185ef2d3157126a631369da244ac72763ad9
 .button-blue {
   transition: all 0.3s ease-in-out;
   position: relative;
