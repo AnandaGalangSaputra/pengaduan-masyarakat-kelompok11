@@ -1,6 +1,5 @@
 <template>
     <div class="container py-5">
-        <!-- Header Section -->
         <div class=" rounded-3 p-5 mb-5 text-center">
             <h1 class="display-4 mb-3 fw-semibold">Pusat Bantuan</h1>
             <p class="lead mb-4 text-secondary">Bagaimana kami dapat membantu Anda?</p>
@@ -16,7 +15,6 @@
             </div>
         </div>
 
-        <!-- FAQ Section -->
         <section class="mb-5">
             <h2 class="h2 mb-4">Pertanyaan yang Sering Diajukan</h2>
             <div class="row g-4">
@@ -31,7 +29,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section>
             <h2 class="h2 mb-4">Butuh Bantuan Lebih Lanjut?</h2>
             <div class="row g-4">
@@ -49,7 +46,7 @@
                         <div class="card-body">
                             <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
                             <h5 class="card-title">Email</h5>
-                            <p class="card-text">bantuan@pengaduan.com</p>
+                            <p class="card-text">anggapajaemailresmi@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -57,8 +54,8 @@
                     <div class="card h-100 py-5 text-center shadow-sm">
                         <div class="card-body">
                             <i class="fas fa-comments fa-2x text-primary mb-3"></i>
-                            <h5 class="card-title">Live Chat</h5>
-                            <p class="card-text">Chat dengan tim kami</p>
+                            <h5 class="card-title">Whatsapp Kami</h5>
+                            <a class="card-text text-dark text-decoration-none" href="https://wa.me/0812345678">Chat dengan tim kami</a>
                         </div>
                     </div>
                 </div>

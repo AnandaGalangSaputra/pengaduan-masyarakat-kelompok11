@@ -9,17 +9,21 @@
                 Berhasil mengirimkan aduan, terus ikuti perkembangan laporan anda di halaman pengguna
             </div>
             <header class="row">
-                <div class="col-12">
-                    <h1 class="text-judul text-center text-light">
+                <div class="col-12"           >
+                    <h1 class="text-judul text-center text-light" data-aos="fade-up"
+                    data-aos-duration="1000">
                         Laporkan Pengaduan <br />
                         Anda Sekarang
                     </h1>
-                    <div class="border-primary mx-auto mb-4" style="width: 20rem; border-bottom: 3px solid;"></div>
-                    <p class="text-center text-light mb-4">
+                    <div class="border-primary mx-auto mb-4 " style="width: 20rem; border-bottom: 3px solid;" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="200"></div>
+                    <p class="text-center text-light mb-4" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="400">
                         Isilah form di bawah ini dengan informasi yang jelas dan lengkap agar laporan Anda bisa segera
                         diproses.
                     </p>
-                    <div class="card border-0 shadow-lg my-5 p-4 rounded-0">
+                    <div class="card border-0 shadow-lg my-5 p-4 rounded-0" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="600">
                         <div class="card-body">
                             <form @submit.prevent="submitForm">
                                 <div class="mb-4">

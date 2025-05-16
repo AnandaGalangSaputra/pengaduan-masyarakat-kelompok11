@@ -14,11 +14,11 @@ export default {
         <div class="container">
             <div class="row d-flex justify-content-around align-items-start ">
                 <div class="col-md-12 d-flex flex-column justify-content-center align-items-center text-center">
-                    <h1 class="text-judul text-white ">
+                    <h1 class="text-judul text-white" data-aos="fade-up" data-aos-duration="1000">
                         Laporkan Pengaduan <br />
                         Anda Sekarang
                     </h1>
-                    <p class="text-white pt-5">
+                    <p class="text-white pt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                         Isilah form di bawah ini dengan informasi yang jelas dan
                         lengkap agar laporan Anda <br />
                         bisa segera diproses.
@@ -27,6 +27,9 @@ export default {
                         text="Pelajari Cara Kerjanya"
                         class="button-blue"
                         icon="fa fa-arrow-right"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="400"
                     />
                 </div>
             </div>
@@ -56,5 +59,6 @@ export default {
     width: 100%;
     height: 100%;
     z-index: 0;
+    object-fit: cover;
 }
 </style>

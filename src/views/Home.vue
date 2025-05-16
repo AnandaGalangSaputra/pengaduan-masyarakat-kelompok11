@@ -150,18 +150,23 @@ export default {
       <div class="row h-100 align-items-center justify-content-center">
         <div
           class="col-lg-7 col-sm-12 order-2 order-lg-1 text-center d-flex flex-column justify-content-around text-lg-start mobile-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="100"
         >
-          <h6 class="hero-h6">Selamat datang di</h6>
-          <h1 class="hero-title blue-color">
+          <h6 class="hero-h6" data-aos="fade-up" data-aos-delay="200">Selamat datang di</h6>
+          <h1 class="hero-title blue-color" data-aos="fade-up" data-aos-delay="300">
             <span class="">Pengaduan</span><br />
             Masyarakat
           </h1>
-          <p class="hero-text my-4 my-lg-5">
+          <p class="hero-text my-4 my-lg-5" data-aos="fade-up" data-aos-delay="400">
             Laporkan keluhan, saran, atau pelanggaran yang Anda temui di lingkungan di
             sini
           </p>
           <div
             class="d-flex flex-column flex-md-row gap-3 justify-content-center justify-content-lg-start button-container"
+            data-aos="fade-up"
+            data-aos-delay="500"
           >
             <BlueButton
               text="Pelajari Cara Kerjanya"
@@ -177,7 +182,12 @@ export default {
             /></router-link>
           </div>
         </div>
-        <div class="col-lg-5 order-1 order-lg-2 mt-4 mt-lg-0 img-container">
+        <div 
+          class="col-lg-5 order-1 order-lg-2 mt-4 mt-lg-0 img-container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+        >
           <img
             src="../assets/Images/hero2.png"
             alt="Hero Image"
