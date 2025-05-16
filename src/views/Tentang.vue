@@ -32,15 +32,17 @@ export default {
 </script>
 
 <template>
-    <section class="h-100 bg-grey py-5">
+    <section class="h-100 bg-grey py-5" id="tentang">
         <div class="container min-vh-100">
             <div class="align-items-center justify-content-center">
                 <div>
-                    <h2 class="hero-h2 text-center blue-color">
+                    <h2 class="hero-h2 text-center blue-color" data-aos="fade-down">
                         TENTANG <br />
                     </h2>
-                    <h1 class="hero-h1 text-center blue-color">LAYANAN</h1>
-                    <p class="mx-auto text-center" style="margin-bottom: 80px;">
+                    <h1 class="hero-h1 text-center blue-color" data-aos="fade-up" data-aos-delay="300">
+                        LAYANAN
+                    </h1>
+                    <p class="mx-auto text-center" style="margin-bottom: 80px;" data-aos="fade-up" data-aos-delay="200">
                         Platform pengaduan masyarakat digital yang cepat,
                         transparan, dan <br />
                         mudah diakses oleh semua warga.
@@ -53,8 +55,10 @@ export default {
                         class=""
                         v-for="(layanan, index) in layananList"
                         :key="index"
+                        :data-aos="'zoom-in-up'"
+                        :data-aos-delay="index * 200 + 300"
                     >
-                        <Card
+                        <Card 
                             :judul="layanan.judul"
                             :deskripsi="layanan.deskripsi"
                             :logo="layanan.logo"

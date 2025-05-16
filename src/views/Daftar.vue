@@ -1,9 +1,9 @@
 <template>
     <section class="vh-100 bgr-gambar">
         <div
-            class="container vh-100 d-flex justify-content-center align-items-center back-form"
+            class="container vh-100 d-flex justify-content-center align-items-center "
         >
-            <div class="row d-flex justify-content-center align-items-center">
+            <div class="row d-flex justify-content-center align-items-center back-form mt-5 p-5">
                 <h1 class="title mb-4 text-center">Daftar</h1>
 
                 <div class="w-100 px-4" style="max-width: 400px">
@@ -83,7 +83,7 @@
                         </div>
                     </div>
                     <div class="pt-4 text-end">
-                        <BlueButton text="Masuk" class="button-blue" />
+                        <BlueButton text="Daftar" class="button-blue" />
                     </div>
 
                     <p
@@ -113,8 +113,9 @@
 
 .back-form {
     background-image: url("../assets/Images/texture.png");
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    /* border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px; */
+    border-radius: 40px;
 }
 
 .lupa-pass {

@@ -3,6 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '@/views/Home.vue'
 import Tentang from "@/views/Tentang.vue";
+import Daftar from "@/views/Daftar.vue";
+import Login from "@/views/Login.vue";
+import FormPengaduan from "@/views/FormPengaduan.vue";
 
 const routes = [
     {
@@ -11,12 +14,39 @@ const routes = [
         component: Home,
         children: [
             {
-                path: "tentang", // => ini akan membuat path '/tentang'
+                path: "tentang",
                 name: "Tentang",
                 component: Tentang,
             },
         ],
     },
+    {
+        path: "/login",
+        name: "Login",
+        component: Login,
+    },
+    {
+        path: "/daftar",
+        name   : "Daftar",
+        component: Daftar,
+    },
+    {
+        path: "/formpengaduan",
+        name: "FormPengaduan",
+        component: FormPengaduan,
+    },
+
+    {
+        path: "/:pathMatch(.*)*",
+        name: "NotFound",
+        component: () => import("@/views/NotFound.vue")
+    },
+
+    {
+        path: "/pusatbantuan",
+        name: "Pusatbantuan",
+        component: () => import("@/views/PusatBantuan.vue")
+    }
 ];
 
 export default createRouter({

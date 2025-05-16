@@ -79,14 +79,6 @@ export default {
   font-weight: 400;
   line-height: 1.5;
 }
-<<<<<<< HEAD
-=======
-
-.button-black:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
-}
->>>>>>> ef7f185ef2d3157126a631369da244ac72763ad9
 .button-blue {
   transition: all 0.3s ease-in-out;
   position: relative;
@@ -174,13 +166,15 @@ export default {
             <BlueButton
               text="Pelajari Cara Kerjanya"
               class="button-blue"
+              href="#tentang"
               icon="fa fa-arrow-right"
             />
-            <BlackButtonOutline
+            <router-link to="/formpengaduan" class="text-decoration-none">
+              <BlackButtonOutline
               class="button-black"
               text="Buat Laporan"
               icon="far fa-hand-pointer"
-            />
+            /></router-link>
           </div>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 mt-4 mt-lg-0 img-container">
