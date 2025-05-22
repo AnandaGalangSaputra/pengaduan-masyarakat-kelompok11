@@ -5,7 +5,7 @@
 }
 
 .button-blue:hover {
-  background-color: var(--blue-color);
+  background-color: var(--nav-color);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }

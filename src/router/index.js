@@ -6,6 +6,7 @@ import Tentang from "@/views/Tentang.vue";
 import Daftar from "@/views/Daftar.vue";
 import Login from "@/views/Login.vue";
 import FormPengaduan from "@/views/FormPengaduan.vue";
+import LacakPengaduan from "@/views/LacakPengaduan.vue";
 
 const routes = [
     {
@@ -24,6 +25,11 @@ const routes = [
         path: "/login",
         name: "Login",
         component: Login,
+    },
+    {
+        path: "/lacakpengaduan",
+        name: "LacakPengaduan",
+        component: LacakPengaduan,
     },
     {
         path: "/daftar",

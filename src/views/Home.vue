@@ -12,6 +12,8 @@ import Login from "../views/Login.vue";
 import Daftar from "../views/Daftar.vue";
 import Jenis from "../views/Jenis.vue";
 
+import FooterBlue from "@/components/FooterBlue.vue";
+
 export default {
   components: {
     BlueButton,
@@ -25,6 +27,7 @@ export default {
     Login,
     Daftar,
     Jenis,
+    FooterBlue
   },
 };
 </script>
@@ -208,4 +211,5 @@ export default {
     <Berita />
     <Adakendala />
     <Foot />
+    <FooterBlue />
 </template>

@@ -62,10 +62,15 @@
             </div>
         </section>
     </div>
+<FooterBlue />
 </template>
 
 <script>
-export default {
+import FooterBlue from "@/components/FooterBlue.vue";
+export default { 
+    components : {
+        FooterBlue,
+    },
     name: 'PusatBantuan',
     data() {
         return {

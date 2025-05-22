@@ -75,12 +75,15 @@ export default {
     margin-top: 40px;
     font-weight: 900;
     letter-spacing: -2%;
+    font-size: 40px;
 }
 
 .hero-h1 {
     font-weight: 900;
     letter-spacing: -2%;
     margin-bottom: 40px;
+    font-size: 64px;
+
 }
 
 .row {

@@ -25,7 +25,7 @@ export default {
                     </p>
                     <BlueButton
                         text="Pelajari Cara Kerjanya"
-                        class="button-blue"
+                        class="button-blue mt-5 "
                         icon="fa fa-arrow-right"
                         data-aos="fade-up"
                         data-aos-duration="1000"
@@ -43,13 +43,39 @@ export default {
     font-size: 60px;
 }
 .button-blue {
-    z-index: 1;
-    background-color: var(--nav-color);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  background: var(--nav-color);
+}
+
+.button-blue:hover {
+  transform: translateY(-2px);  
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.button-blue::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: inherit;
+  filter: blur(40px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.button-blue:hover::after {
+  opacity: 0.7;
+  transform: scale(1.1);
 }
 
 #footer {
     position: relative;
-    overflow: hidden;
+    
 }
 
 .wavy-element {

@@ -64,13 +64,35 @@
 }
 
 .button-blue {
-    width: 100%;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  background: #007bff;
+  width: 100%;
 }
 
 .button-blue:hover {
-    width: 100%;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.button-blue::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: inherit;
+  filter: blur(40px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.button-blue:hover::after {
+  opacity: 0.7;
+  transform: scale(1.1);
 }
 
 .gambar {

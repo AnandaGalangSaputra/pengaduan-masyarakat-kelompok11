@@ -67,7 +67,7 @@
                                     </label>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary w-100 mt-3">
+                                <button type="submit" class="btn-sub btn btn-primary w-100 mt-3">
                                     Kirim Pengaduan
                                 </button>
                             </form>
@@ -90,6 +90,12 @@
 header {
     padding-top: 8rem;
 }
+
+.btn-sub {
+    height: 60px;
+}
+
+
 
 .img-container {
     background-image: url('../assets/Images/bgindo.png');
