@@ -45,11 +45,12 @@ navbar-toggler:hover {
 navbar-toggler::after {
   border: none;
 }
+
 </style>
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top" id="navbar">
     <div class="container">
-      <a class="navbar-brand fw-bold hoverable fst-italic" id="userName" href="#">Pengaduan Masyarakat</a>
+      <a class="navbar-brand fw-bold hoverable fst-italic" id="userName" href="#"><router-link to="/" class="text-decoration-none text-light">Pengaduan Masyarakat</router-link></a>
       <button class="navbar-toggler border-0 hoverable" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>

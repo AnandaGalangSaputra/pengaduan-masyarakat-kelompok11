@@ -18,9 +18,8 @@
             data-aos="fade-down"
             data-aos-delay="500"
           >
-            Isilah form di bawah ini dengan informasi yang jelas dan lengkap
-            agar <br />
-            laporan Anda bisa segera diproses.
+            Masukkan nomor tiket pengaduan dan NIK Anda untuk <br />
+            melacak status pengaduan yang telah disampaikan.
           </p>
         </div>
         <div class="col-md-12 d-flex justify-content-center my-5">
