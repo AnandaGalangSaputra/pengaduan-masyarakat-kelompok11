@@ -1,7 +1,7 @@
 <template>
     <section>
         <div
-            class="kaki d-flex flex-row justify-content-between align-items-center pt-3"
+            class="kaki d-flex flex-row justify-content-between align-items-center py-3 px-3"
         >
             <div>
                 <p class="text-white">
@@ -29,8 +29,8 @@
 <style scoped>
 .kaki {
     background-color: var(--nav-color);
-    height: 70px;
-    padding-inline: 90px;
+    /* height: 70px; */
+    /* padding-inline: 90px; */
     font-size: 15px;
 }
 </style>
