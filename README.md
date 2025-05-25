@@ -1,29 +1,36 @@
-# pengaduan masyarakat
+# Sistem Pengaduan Masyarakat Online
+![Screenshot](public/Hero%20Screenshoot.png)
+# Sistem Pengaduan Masyarakat Online
 
-This template should help get you started developing with Vue 3 in Vite.
+## 📋 Overview
+Sistem Pengaduan Masyarakat Online adalah platform berbasis web yang memungkinkan masyarakat untuk menyampaikan pengaduan atau keluhan secara digital. Sistem ini menyediakan antarmuka yang user-friendly untuk pelaporan dan pengelolaan pengaduan.
 
-## Recommended IDE Setup
+## 🚀 Fitur Utama
+- Landing Page interaktif
+- Autentikasi user (login/register)
+- Form pengaduan dengan validasi input
+- Pusat bantuan
+- Lacak status pengaduan
+- Validasi data dan keamanan
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 💻 Tech Stack & Dependencies
+- HTML5 & CSS3
+- Bootstrap
+- Font Awesome
+- AOS (Animate On Scroll)
+- Font Poppins
+- JavaScript
 
-## Customize configuration
+## 🛠️ Instalasi
+1. Clone repository
+2. npm install
+3. npm run dev
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 💡 Persyaratan Sistem
+- Browser modern (Chrome, Firefox, Safari)
+- Koneksi internet untuk load CDN
 
-## Project Setup
+## 📝 Lisensi
+Open Source - MIT License
 
-```sh
-npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
