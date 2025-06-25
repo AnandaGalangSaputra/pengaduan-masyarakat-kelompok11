@@ -9,17 +9,7 @@ class Pengaduan extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'judul_laporan',
-        'nama',
-        'ktp',
-        'kategori',
-        'lokasi_kejadian',
-        'isi_laporan',
-        'bukti_foto',
-        'setuju',
-        'tiket_lacak',
-    ];
+    protected $guarded = [];
 
     protected $table = 'pengaduan';
 }
