@@ -52,6 +52,7 @@
             </dl>
 
             <a href="{{ route('pengaduan_masuk.index') }}" class="btn btn-secondary">Kembali</a>
+            <a class="btn btn-danger">Hapus Pengaduan</a>
         </div>
     </div>
 </div>

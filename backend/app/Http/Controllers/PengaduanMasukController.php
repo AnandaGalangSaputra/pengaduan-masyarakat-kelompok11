@@ -15,7 +15,14 @@ class PengaduanMasukController extends Controller
 
     public function index()
     {
-        $pengaduans = Pengaduan::whereIn('status_laporan', ['diproses', 'baru'])->orderBy('created_at', 'desc')->simplePaginate(10);
+        $pengaduans = Pengaduan::where('status_laporan', 'diproses')
+        ->orderBy('created_at', 'desc')
+        ->simplePaginate(10);
+
+        foreach ($pengaduans as $pengaduan) {
+            $pengaduan->status_waktu = Carbon::parse($pengaduan->created_at)->diffInHours(now()) < 24 ? 'baru' : 'diproses';
+        }
+
         return view('pengaduan_masuk', compact('pengaduans'));
     }
 

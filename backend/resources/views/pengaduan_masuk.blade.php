@@ -6,9 +6,9 @@
 
     <style>
         .action-buttons a {
-        position: relative;
-        z-index: 2;
-    }
+            position: relative;
+            z-index: 2;
+        }
     </style>
 
     <div class="container-fluid">
@@ -47,20 +47,28 @@
                                     <td>{{ $p->kategori }}</td>
                                     <td>{{ $p->lokasi_kejadian }}</td>
                                     <td>
-                                        <span class="badge badge-{{
-                                            $p->status_laporan == 'diproses' ? 'warning' :
-                                            ($p->status_laporan == 'diteruskan' ? 'info' :
-                                            ($p->status_laporan == 'selesai' ? 'success' : 'danger'))
-                                        }}">
-                                            {{ ucfirst($p->status_laporan) }}
-                                        </span>
+                                        @if ($p->status_laporan == 'diproses')
+                                            @if ($p->status_waktu == 'baru')
+                                                <span class="badge badge-primary">Baru</span>
+                                            @else
+                                                <span class="badge badge-warning text-dark">Diproses</span>
+                                            @endif
+                                        @elseif ($p->status_laporan == 'diteruskan')
+                                            <span class="badge badge-info">Diteruskan</span>
+                                        @elseif ($p->status_laporan == 'selesai')
+                                            <span class="badge badge-success">Selesai</span>
+                                        @else
+                                            <span class="badge badge-danger">{{ ucfirst($p->status_laporan) }}</span>
+                                        @endif
                                     </td>
                                     <td class="action-buttons" style="pointer-events: auto;">
-                                        <a href="{{ route('pengaduan.cetak', $p->id) }}" class="btn btn-sm btn-secondary">
+                                        {{-- <a href="{{ route('pengaduan.cetak', $p->id) }}" class="btn btn-sm btn-secondary">
                                             <i class="fas fa-print"></i> Print Surat
-                                        </a>
-                                        <a href="{{ route('pengaduan.show', $p->id) }}" class="btn btn-sm btn-primary">Lihat</a>
-                                        <a href="{{ route('pengaduan.tindak', $p->id) }}" class="btn btn-sm btn-warning">Tindak</a>
+                                        </a> --}}
+                                        <a href="{{ route('pengaduan.show', $p->id) }}"
+                                            class="btn btn-sm btn-primary">Lihat</a>
+                                        <a href="{{ route('pengaduan.tindak', $p->id) }}"
+                                            class="btn btn-sm btn-warning">Tindak</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -75,7 +83,8 @@
             </div>
         </div>
         <p class="mb-4 text-danger">
-            *Mohon print surat pengaduan terlebih dahulu untuk disampaikan ke Pengguna sebelum melakukan tindak. Pastikan semua data sudah lengkap dan benar sebelum mencetak.
+            *Mohon print surat pengaduan terlebih dahulu untuk disampaikan ke Pengguna sebelum melakukan tindak. Pastikan
+            semua data sudah lengkap dan benar sebelum mencetak.
         </p>
     </div>
 @endsection
