@@ -16,8 +16,8 @@ class PengaduanMasukController extends Controller
     public function index()
     {
         $pengaduans = Pengaduan::where('status_laporan', 'diproses')
-        ->orderBy('created_at', 'desc')
-        ->simplePaginate(10);
+            ->orderBy('created_at', 'desc')
+            ->simplePaginate(10);
 
         foreach ($pengaduans as $pengaduan) {
             $pengaduan->status_waktu = Carbon::parse($pengaduan->created_at)->diffInHours(now()) < 24 ? 'baru' : 'diproses';
@@ -47,7 +47,6 @@ class PengaduanMasukController extends Controller
         try {
             $pengaduan = Pengaduan::findOrFail($id);
             return view('pengaduan_tindak', compact('pengaduan'))->with('success', 'Data pengaduan berhasil ditemukan!');
-
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Gagal menemukan data pengaduan!');
         }
@@ -90,8 +89,8 @@ class PengaduanMasukController extends Controller
         $startDate = Carbon::now()->startOfMonth();
         $endDate = Carbon::now()->endOfMonth();
         $status_distribusi = Pengaduan::select('status_laporan', DB::raw('COUNT(*) as total'))
-        ->groupBy('status_laporan')
-        ->get();
+            ->groupBy('status_laporan')
+            ->get();
         $max_total = $status_distribusi->max('total') ?? 1; // Default 1 jika tidak ada data
 
         $data = [
@@ -119,5 +118,16 @@ class PengaduanMasukController extends Controller
                 'defaultFont' => 'sans-serif'
             ]);
         return $pdf->stream('analisis-aduan-' . date('Y-m-d') . '.pdf');
+    }
+    public function bulkDelete(Request $request)
+    {
+        $ids = $request->input('ids');
+
+        if ($ids) {
+            Pengaduan::whereIn('id', $ids)->delete();
+            return redirect()->back()->with('success', 'Data berhasil dihapus!');
+        }
+
+        return redirect()->back()->with('error', 'Tidak ada data yang dipilih!');
     }
 }

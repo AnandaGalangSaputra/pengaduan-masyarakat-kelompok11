@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PengaduanController;
+use App\Http\Controllers\PengaduanMasukController;
 use App\Http\Controllers\TelegramController;
 
 /*
@@ -22,6 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/pengaduan', [PengaduanController::class, 'store']);
 Route::post('/x', [PengaduanController::class, 'tampil']);
+Route::delete('/pengaduan/bulk-delete', [PengaduanMasukController::class, 'bulkDelete'])->name('pengaduan.bulkDelete');
 
 Route::get('/pengaduan', [PengaduanController::class, 'tampil']);
 Route::get('/lacak', [PengaduanController::class, 'lacak']);
