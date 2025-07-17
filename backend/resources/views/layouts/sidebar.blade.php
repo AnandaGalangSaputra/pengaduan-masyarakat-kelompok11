@@ -78,7 +78,7 @@
     </li>
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="{{ route('pengaduan.riwayatpengaduan')}}">
             <i class="fas fa-fw fa-history"></i>
             <span>Riwayat Pengaduan</span></a>
     </li>

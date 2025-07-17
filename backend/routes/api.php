@@ -23,7 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/pengaduan', [PengaduanController::class, 'store']);
 Route::post('/x', [PengaduanController::class, 'tampil']);
-Route::delete('/pengaduan/bulk-delete', [PengaduanMasukController::class, 'bulkDelete'])->name('pengaduan.bulkDelete');
 
 Route::get('/pengaduan', [PengaduanController::class, 'tampil']);
 Route::get('/lacak', [PengaduanController::class, 'lacak']);

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use Svg\Tag\Rect;
 
 class PengaduanMasukController extends Controller
 {
@@ -129,5 +130,27 @@ class PengaduanMasukController extends Controller
         }
 
         return redirect()->back()->with('error', 'Tidak ada data yang dipilih!');
+    }
+
+    public function riwayatPengaduan(Request $request)
+    {
+        // Ambil filter tanggal jika ada
+        $start = $request->input('start_date');
+        $end = $request->input('end_date');
+
+        // Query hanya pengaduan yang sudah diteruskan
+        $query = Pengaduan::where('status_laporan', 'diteruskan');
+
+        // Filter berdasarkan tanggal jika tersedia
+        if ($start && $end) {
+            $query->whereBetween('created_at', [
+                Carbon::parse($start)->startOfDay(),
+                Carbon::parse($end)->endOfDay()
+            ]);
+        }
+
+        $pengaduans = $query->orderBy('created_at', 'desc')->paginate(10);
+
+        return view('riwayat_pengaduan', compact('pengaduans', 'start', 'end'));
     }
 }

@@ -51,7 +51,7 @@
                 <dd class="col-sm-9">{{ $pengaduan->created_at->format('d M Y H:i') }}</dd>
             </dl>
 
-            <a href="{{ route('pengaduan_masuk.index') }}" class="btn btn-secondary">Kembali</a>
+            <a href="{{ url()->previous() }}" class="btn btn-secondary">Kembali</a>
             <a class="btn btn-danger">Hapus Pengaduan</a>
         </div>
     </div>
