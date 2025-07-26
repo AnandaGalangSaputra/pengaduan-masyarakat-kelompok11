@@ -108,7 +108,7 @@
 
                             <div class="col-sm-6 col-md-4 col-lg-3">
                                 <div class="card border-0 shadow-sm text-center h-100">
-                                    <img src="https://ui-avatars.com/api/?name=Muhammad+Nur+Syafii&background=random"
+                                    <img src="../assets/images/foto_orang/nur.jpg"
                                         class="rounded-circle mx-auto mt-4" width="100" height="100"
                                         alt="Muhammad Nur Syafii">
                                     <div class="card-body">
@@ -136,7 +136,7 @@
 
                             <div class="col-sm-6 col-md-4 col-lg-3">
                                 <div class="card border-0 shadow-sm text-center h-100">
-                                    <img src="https://ui-avatars.com/api/?name=Muammar+Nibros&background=random"
+                                    <img src="../assets/images/foto_orang/muammar.jpg"
                                         class="rounded-circle mx-auto mt-4" width="100" height="100"
                                         alt="Muammar Nibros">
                                     <div class="card-body">
@@ -148,7 +148,7 @@
 
                             <div class="col-sm-6 col-md-4 col-lg-3">
                                 <div class="card border-0 shadow-sm text-center h-100">
-                                    <img src="https://ui-avatars.com/api/?name=Nur+Ikhsan+Cleviriadi&background=random"
+                                    <img src=".../assets/images/foto_orang/ikhsan.jpg"
                                         class="rounded-circle mx-auto mt-4" width="100" height="100"
                                         alt="Nur Ikhsan Cleviriadi">
                                     <div class="card-body">
