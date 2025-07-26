@@ -162,7 +162,7 @@
                 </section>
             </div>
         </section>
-    <FooterBlue />
+        <FooterBlue />
 </template>
 
 <script>

@@ -4,7 +4,7 @@
             <h1 class="display-4 fw-bold me-3">{{ nomor }}</h1>
             <div>
                 <h5 class="fw-bold">{{ judul }}</h5>
-                <p class="mb-0" style="font-size: 0.95rem">
+                <p class="mb-0" style="font-size: 16px">
                     {{ deskripsi }}
                 </p>
             </div>
@@ -26,8 +26,10 @@ export default {
 <style scoped>
 .card {
     background-color: #4a67f6;
-    border-radius: 20px;
-    max-width: 310px;
-    max-height: 232px;
+    border-radius: 19px;
+    min-width: 380px;
+    max-width: 380px;
+    min-height: 190px;
+    max-height: 190px;
 }
 </style>
