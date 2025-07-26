@@ -1,5 +1,4 @@
 <script>
-
 import JenisCard from "@/components/JenisCard.vue";
 
 export default {
@@ -18,12 +17,12 @@ export default {
                 {
                     judul: "Keamanan",
                     deskripsi:
-                        "Pengaduan mengenai masalah keamanan, seperti tindakan kriminal, kebisingan, atau gangguan ketertiban umum",
+                        "Pengaduan mengenai masalah keamanan, seperti tindakan kriminal, kehilangan barang, kebocoran data pribadi, kebisingan, atau gangguan ketertiban umum",
                 },
                 {
                     judul: "Fasilitas Umum",
                     deskripsi:
-                        "Pengaduan mengenai kondisi fasilitas umum, seperti jalan, jembatan, taman, dan sarana transportasi yang tidak memadai atau rusak",
+                        "Pengaduan mengenai kondisi fasilitas umum, seperti jalan, jembatan, taman, tempat ibadah, halte bus, dan sarana transportasi yang tidak memadai atau rusak",
                 },
                 {
                     judul: "Seksual",
@@ -44,39 +43,54 @@ export default {
 .card {
     width: 640px;
     height: 243px;
-    background-color: #ffff !important;
 }
 .title-text {
     font-size: 50px;
+}
+
+.des {
+    max-width: 940px;
 }
 </style>
 
 <template>
     <section class="min-vh-100">
         <div class="container py-5">
-        <h1 class="title-text text-center my-5 blue-color fw-bold" data-aos="fade-down" data-aos-duration="1000">
-            Jenis Pengaduan
-        </h1>
-        <p class="mx-auto text-center my-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            Platform pengaduan masyarakat digital yang cepat, transparan, dan
-            mudah diakses oleh semua warga.
-        </p>
-        <div class="row g-4 justify-content-center my-5">
-            <div
-            class="col-md-6 d-flex justify-content-center"
-            v-for="(layanan, index) in layananList"
-            :key="index"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            :data-aos-delay="index * 200"
+            <h1
+                class="title-text text-center my-5 blue-color fw-bold"
+                data-aos="fade-down"
+                data-aos-duration="1000"
             >
-            <JenisCard
-                :judul="layanan.judul"
-                :deskripsi="layanan.deskripsi"
-                class="card"
-            />
+                Jenis Pengaduan
+            </h1>
+            <p
+                class="des mx-auto text-center my-3"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+            >
+                Platform pengaduan ini menyediakan berbagai jenis kategori
+                pengaduan yang dapat diakses oleh masyarakat. Masing-masing
+                kategori dirancang untuk menangani isu-isu yang berbeda,
+                sehingga pengaduan yang disampaikan dapat segera diproses dan
+                ditangani oleh pihak yang berwenang.
+            </p>
+            <div class="row g-4 justify-content-center my-5">
+                <div
+                    class="col-md-6 d-flex justify-content-center"
+                    v-for="(layanan, index) in layananList"
+                    :key="index"
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    :data-aos-delay="index * 200"
+                >
+                    <JenisCard
+                        :judul="layanan.judul"
+                        :deskripsi="layanan.deskripsi"
+                        class="card"
+                    />
+                </div>
             </div>
         </div>
-    </div>
     </section>
 </template>

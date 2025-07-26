@@ -204,8 +204,99 @@
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   </section>
   <FooterBlue />
+=======
+    <section id="kelompok" class="">
+            <div class="container-fluid">
+                <section class="py-5 bg-light w-100 bg-danger">
+                    <div class="container">
+                        <h2 class="text-center display-5 mb-3 fw-semibold mb-5">Tim Pengembang</h2>
+                        <div class="row g-4 justify-content-center">
+
+                            <!-- Card Profile -->
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card border-0 shadow-sm text-center h-100">
+                                    <img src="https://ui-avatars.com/api/?name=Ananda+Galang+Saputra&background=random"
+                                        class="rounded-circle mx-auto mt-4" width="100" height="100"
+                                        alt="Ananda Galang Saputra">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-1">Ananda Galang Saputra</h5>
+                                        <p class="text-muted small mb-0">23.11.5734</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card border-0 shadow-sm text-center h-100">
+                                    <img src="https://ui-avatars.com/api/?name=Nadila+Febriana&background=random"
+                                        class="rounded-circle mx-auto mt-4" width="100" height="100"
+                                        alt="Nadila Febriana">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-1">Nadila Febriana</h5>
+                                        <p class="text-muted small mb-0">23.11.5444</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card border-0 shadow-sm text-center h-100">
+                                    <img src="../assets/images/foto_orang/nur.jpg"
+                                        class="rounded-circle mx-auto mt-4" width="100" height="100"
+                                        alt="Muhammad Nur Syafii">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-1">Muhammad Nur Syafii</h5>
+                                        <p class="text-muted small mb-0">23.11.5451</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card border-0 shadow-sm text-center h-100">
+                                    <img src="https://ui-avatars.com/api/?name=Uswatun+Qasanah&background=random"
+                                        class="rounded-circle mx-auto mt-4" width="100" height="100"
+                                        alt="Uswatun Qasanah">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-1">Uswatun Qasanah</h5>
+                                        <p class="text-muted small mb-0">23.11.5448</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card border-0 shadow-sm text-center h-100">
+                                    <img src="../assets/images/foto_orang/muammar.jpg"
+                                        class="rounded-circle mx-auto mt-4" width="100" height="100"
+                                        alt="Muammar Nibros">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-1">Mu'ammar Nibros</h5>
+                                        <p class="text-muted small mb-0">23.11.5465</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="card border-0 shadow-sm text-center h-100">
+                                    <img src=".../assets/images/foto_orang/ikhsan.jpg"
+                                        class="rounded-circle mx-auto mt-4" width="100" height="100"
+                                        alt="Nur Ikhsan Cleviriadi">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-1">Nur Ikhsan Cleviriadi</h5>
+                                        <p class="text-muted small mb-0">23.11.5487</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <FooterBlue />
 </template>
 
 <script>
