@@ -57,7 +57,7 @@ export default {
             Langkah Pengaduan
         </h2>
         <p
-            class="mx-auto text-center pt-4 pb-5 text-pengaduan"
+            class="mx-auto text-center pt-4 pb-1 text-pengaduan"
             data-aos="fade-up"
             data-aos-delay="200"
         >
