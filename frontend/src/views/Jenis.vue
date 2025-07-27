@@ -22,7 +22,7 @@ export default {
                 {
                     judul: "Fasilitas Umum",
                     deskripsi:
-                        "Pengaduan mengenai kondisi fasilitas umum, seperti jalan, jembatan, taman, tempat ibadah, halte bus, dan sarana transportasi yang tidak memadai atau rusak",
+                        "Pengaduan mengenai kondisi fasilitas umum, seperti jalan, jembatan, taman, halte bus, dan sarana transportasi yang tidak memadai atau rusak",
                 },
                 {
                     judul: "Seksual",
@@ -58,16 +58,16 @@ export default {
         <div class="container py-5">
             <h1
                 class="title-text text-center my-5 blue-color fw-bold"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                data-aos="fade-up"
+                data-aos-duration="800"
             >
                 Jenis Pengaduan
             </h1>
             <p
                 class="des mx-auto text-center my-3"
                 data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="200"
+                data-aos-duration="800"
+                
             >
                 Platform pengaduan ini menyediakan berbagai jenis kategori
                 pengaduan yang dapat diakses oleh masyarakat. Masing-masing
@@ -77,12 +77,12 @@ export default {
             </p>
             <div class="row g-4 justify-content-center my-5">
                 <div
-                    class="col-md-6 d-flex justify-content-center"
+                    class="col-md-5 d-flex justify-content-center"
                     v-for="(layanan, index) in layananList"
                     :key="index"
-                    data-aos="fade-up"
+                    :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'" 
                     data-aos-duration="800"
-                    :data-aos-delay="index * 200"
+                  
                 >
                     <JenisCard
                         :judul="layanan.judul"

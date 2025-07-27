@@ -40,8 +40,7 @@ export default {
 }
 
 .card-body {
-    /* height: 300px;
-    width: 620px; */
+ 
     padding: 30px 45px;
     border-radius: 29px;
     height: 100%;
@@ -51,7 +50,7 @@ export default {
     border-radius: 29px;
     /* width: 620px !important; */
     height: 100%;
-    max-width: 90%;
+    max-width: 100%;
 }
 .card-text {
     font-size: 20px;

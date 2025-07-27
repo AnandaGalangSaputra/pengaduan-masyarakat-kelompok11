@@ -1,9 +1,11 @@
 r<script>
 import BlueButton from "@/components/BlueButton.vue";
+import FooterBlue from "@/components/FooterBlue.vue";
 
 export default {
     components: {
         BlueButton,
+        FooterBlue,
     },
 };
 </script>
@@ -18,23 +20,27 @@ export default {
                         Laporkan Pengaduan <br />
                         Anda Sekarang
                     </h1>
-                    <p class="text-white pt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        Isilah form di bawah ini dengan informasi yang jelas dan
-                        lengkap agar laporan Anda <br />
+                    <p class="text-white pt-5 desk" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        Klik tombol di bawah dan isilah form di bawah ini dengan informasi yang jelas dan
+                        lengkap agar laporan Anda 
                         bisa segera diproses.
                     </p>
-                    <BlueButton
+                    <div data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="400">
+
+                        <BlueButton
                         text="Pelajari Cara Kerjanya"
                         class="button-blue mt-5 "
                         icon="fa fa-arrow-right"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="400"
-                    />
+                        
+                        />
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <FooterBlue />
 </template>
 
 <style scoped>
@@ -43,11 +49,14 @@ export default {
     font-size: 60px;
 }
 .button-blue {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   position: relative;
   background: var(--nav-color);
 }
 
+.desk {
+    max-width: 700px;
+}
 .button-blue:hover {
   transform: translateY(-2px);  
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);

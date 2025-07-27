@@ -38,14 +38,17 @@ export default {
                 <div>
                     <h2
                         class="hero-h2 text-center blue-color"
-                        data-aos="fade-down"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
                     >
                         TENTANG <br />
                     </h2>
                     <h1
                         class="hero-h1 text-center blue-color"
                         data-aos="fade-up"
-                        data-aos-delay="300"
+                        data-aos-delay="200"
+                        data-aos-duration="800"
+
                     >
                         LAYANAN
                     </h1>

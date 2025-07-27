@@ -1,17 +1,17 @@
 <template>
     <div class="container py-5">
         <div class="rounded-3 p-5 mb-5 text-center">
-            <h1 class="display-4 mb-3 fw-semibold">Pusat Bantuan</h1>
-            <p class="lead mb-4 text-secondary">
+            <h1 class="display-4 mb-3 fw-semibold" data-aos="fade-down" data-aos-duration="800">Pusat Bantuan</h1>
+            <p class="lead mb-4 text-secondary" data-aos="fade-down" data-aos-duration="800">
                 Bagaimana kami dapat membantu Anda?
             </p>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" data-aos="fade-down" data-aos-duration="800">
                 <div class="col-md-8">
                     <div class="input-group mb-3">
                         <input
                             type="text"
                             class="form-control"
-                            placeholder="Cari bantuan..."
+                            placeholder="Cari bantuan...."
                             v-model="searchQuery"
                         />
                         <button class="btn btn-primary" type="button">
@@ -22,14 +22,16 @@
             </div>
         </div>
 
-        <section class="mb-5">
-            <h2 class="h2 mb-4">Pertanyaan yang Sering Diajukan</h2>
-            <div class="row g-4">
-                <div
+        <section class="mb-5" data-aos="fade-up" data-aos-duration="800" >
+          
+
+                <h2 class="h2 mb-4" >Pertanyaan yang Sering Diajukan</h2>
+                <div class="row g-4">
+                    <div
                     class="col-md-6"
                     v-for="(faq, index) in visibleFaqs"
                     :key="index"
-                >
+                    >
                     <div class="card h-100 py-2 px-3 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title text-primary">
@@ -39,40 +41,41 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div
-                    v-if="visibleFaqs.length === 0"
-                    class="text-center text-secondary mt-4"
+                v-if="visibleFaqs.length === 0"
+                class="text-center text-secondary mt-4"
                 >
-                    <p>
-                        Tidak ada hasil ditemukan untuk "<strong>{{
-                            searchQuery
-                        }}</strong
+                <p>
+                    Tidak ada hasil ditemukan untuk "<strong>{{
+                        searchQuery
+                    }}</strong
                         >"
                     </p>
                 </div>
             </div>
-
+            
             <!-- Tombol Lihat Selengkapnya -->
             <div
-                class="text-center mt-4"
-                v-if="
+            class="text-center mt-4"
+            v-if="
                     !showAll &&
                     filteredFaqs.length > maxVisible &&
                     searchQuery === ''
-                "
+                    "
             >
-                <button class="btn btn-outline-primary" @click="showAll = true">
-                    Lihat Selengkapnya
-                </button>
-            </div>
+            <button class="btn btn-outline-primary" @click="showAll = true">
+                Lihat Selengkapnya
+            </button>
+        </div>
+ 
         </section>
 
         <section>
-            <h2 class="h2 mb-4">Butuh Bantuan Lebih Lanjut?</h2>
+            <h2 class="h2 mb-4"  data-aos="fade-up" data-aos-duration="800">Butuh Bantuan Lebih Lanjut?</h2>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 py-5 text-center shadow-sm">
+                <div class="col-md-4 behind-card"  data-aos="fade-left" data-aos-duration="800" data-aos-delay="600">
+                    <div class="card h-100 py-5 text-center  shadow-sm">
                         <div class="card-body">
                             <i class="fas fa-phone fa-2x text-primary mb-3"></i>
                             <h5 class="card-title">Hubungi Kami</h5>
@@ -80,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 front-card"  data-aos="fade-up" data-aos-duration="800">
                     <div class="card h-100 py-5 text-center shadow-sm">
                         <div class="card-body">
                             <i
@@ -93,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 behind-card"  data-aos="fade-right" data-aos-duration="800" data-aos-delay="600">
                     <a
                         style="text-decoration: none; color: inherit"
                         href="https://wa.me/0812345678"
@@ -117,12 +120,12 @@
         <div class="container-fluid">
             <section class="py-5 bg-light w-100 bg-danger">
                 <div class="container">
-                    <h2 class="text-center display-5 mb-3 fw-semibold mb-5">
+                    <h2 class="text-center display-5 mb-3 fw-semibold mb-5" data-aos="fade-up" data-aos-duration="800">
                         Tim Pengembang
                     </h2>
-                    <div class="row g-4 justify-content-center">
+                    <div class="row g-4 justify-content-center" >
                         <!-- Card Profile -->
-                        <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800">
                             <div
                                 class="card border-0 shadow-sm text-center h-100"
                             >
@@ -150,7 +153,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                             <div
                                 class="card border-0 shadow-sm text-center h-100"
                             >
@@ -178,7 +181,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                             <div
                                 class="card border-0 shadow-sm text-center h-100"
                             >
@@ -206,7 +209,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                             <div
                                 class="card border-0 shadow-sm text-center h-100"
                             >
@@ -234,7 +237,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                             <div
                                 class="card border-0 shadow-sm text-center h-100"
                             >
@@ -262,7 +265,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                             <div
                                 class="card border-0 shadow-sm text-center h-100"
                             >
@@ -294,7 +297,7 @@
             </section>
         </div>
     </section>
-    <FooterBlue />
+    <FooterBlue class="front-card" />
 </template>
 
 <script>
@@ -381,12 +384,26 @@ export default {
 .card {
     transition: transform 0.2s;
 }
+.front-card {
+    position: relative;
+    z-index: 2;
+
+}
+
+.behind-card {
+    position: relative;
+    z-index: 1;
+}
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.158) !important;
 }
 
+.btn:hover {
+background-color:var(--nav-color) ;
+box-shadow: 0 5px 15px rgba(60, 0, 255, 0.298);
+}
 .link-github {
     text-decoration: none;
     color: inherit;

@@ -14,7 +14,7 @@ const app = createApp(App)
 app.AOS = AOS.init({
   duration: 650,          
   easing: 'ease-in-out',  
-  once: true,             
+             
   offset: 100,            
 })
 
