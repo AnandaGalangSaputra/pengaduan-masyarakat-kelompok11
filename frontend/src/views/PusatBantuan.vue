@@ -133,7 +133,7 @@
                                 >
                                     <img
                                         src="https://ui-avatars.com/api/?name=Ananda+Galang+Saputra&background=random"
-                                        class="rounded-circle mx-auto mt-4"
+                                        class="rounded-circle mx-auto mt-4 d-block object-fit-cover"
                                         width="100"
                                         height="100"
                                         alt="Ananda Galang Saputra"
@@ -161,7 +161,7 @@
                                 >
                                     <img
                                         src="https://ui-avatars.com/api/?name=Nadila+Febriana&background=random"
-                                        class="rounded-circle mx-auto mt-4"
+                                        class="rounded-circle mx-auto mt-4 d-block object-fit-cover"
                                         width="100"
                                         height="100"
                                         alt="Nadila Febriana"
@@ -189,7 +189,7 @@
                                 >
                                     <img
                                         src="../assets/images/foto_orang/nur.jpg"
-                                        class="rounded-circle mx-auto mt-4"
+                                        class="rounded-circle mx-auto mt-4 d-block object-fit-cover"
                                         width="100"
                                         height="100"
                                         alt="Muhammad Nur Syafii"
@@ -217,7 +217,7 @@
                                 >
                                     <img
                                         src="https://ui-avatars.com/api/?name=Uswatun+Qasanah&background=random"
-                                        class="rounded-circle mx-auto mt-4"
+                                        class="rounded-circle mx-auto mt-4 d-block object-fit-cover"
                                         width="100"
                                         height="100"
                                         alt="Uswatun Qasanah"
@@ -245,7 +245,7 @@
                                 >
                                     <img
                                         src="../assets/images/foto_orang/ammar.jpg"
-                                        class="rounded-circle mx-auto mt-4"
+                                        class="rounded-circle mx-auto mt-4 d-block object-fit-cover"
                                         width="100"
                                         height="100"
                                         alt="Muammar Nibros"
@@ -273,7 +273,7 @@
                                 >
                                     <img
                                         src="../assets/Images/foto_orang/ikhsan.jpeg"
-                                        class="rounded-circle mx-auto mt-4"
+                                        class="rounded-circle mx-auto mt-4 d-block object-fit-cover"
                                         width="100"
                                         height="100"
                                         alt="Nur Ikhsan Cleviriadi"

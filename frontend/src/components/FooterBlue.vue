@@ -5,7 +5,7 @@
         >
             <div>
                 <p class="text-white">
-                    Order.uk Copyright 2025, All Rights Reserved.
+                    <strong>Pengaduan masyarakat</strong> Copyright © 2025, All Rights Reserved.
                 </p>
             </div>
             <div class="d-flex gap-5">
@@ -14,9 +14,6 @@
                 </div>
                 <div>
                     <p class="text-white">Terms</p>
-                </div>
-                <div>
-                    <p class="text-white">Pricing</p>
                 </div>
                 <div>
                     <p class="text-white">Do not sell or share my personal information</p>
@@ -29,8 +26,10 @@
 <style scoped>
 .kaki {
     background-color: var(--nav-color);
-    /* height: 70px; */
-    /* padding-inline: 90px; */
     font-size: 15px;
+    height: 70px;
+}
+.kaki p {
+    margin: 0;
 }
 </style>
