@@ -7,6 +7,7 @@ const Daftar = () => import('@/views/Daftar.vue')
 const Login = () => import('@/views/Login.vue')
 const FormPengaduan = () => import('@/views/FormPengaduan.vue')
 const LacakPengaduan = () => import('@/views/LacakPengaduan.vue')
+const FormContact = () => import('@/views/FormContact.vue')
 
 const routes = [
     {
@@ -52,6 +53,11 @@ const routes = [
         path: "/pusatbantuan",
         name: "Pusatbantuan",
         component: () => import("@/views/PusatBantuan.vue")
+    },
+    {
+        path: "/formcontact",
+        name: "Formcontact",
+        component: () => import("@/views/FormContact.vue")
     }
 ];
 
