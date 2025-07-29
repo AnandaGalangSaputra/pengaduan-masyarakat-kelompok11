@@ -1,9 +1,7 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterLink, RouterView, useRouter } from "vue-router";
 import loginButton from "@/components/WhiteButtonOutline.vue";
-const items = [{ to: "/", name: "Home" }];
-
-import { ref, onMounted } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 
 const lastScrollPosition = ref(0);
 const isNavbarVisible = ref(true);
@@ -14,13 +12,9 @@ onMounted(() => {
     const currentScrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScrollPosition < 0) {
-      return;
-    }
+    if (currentScrollPosition < 0) return;
 
-    if (Math.abs(currentScrollPosition - lastScrollPosition.value) < 60) {
-      return;
-    }
+    if (Math.abs(currentScrollPosition - lastScrollPosition.value) < 60) return;
 
     isNavbarVisible.value = currentScrollPosition < lastScrollPosition.value;
     lastScrollPosition.value = currentScrollPosition;
@@ -34,6 +28,16 @@ onMounted(() => {
     }
   });
 });
+
+const closeNavbar = () => {
+  const navbarCollapse = document.getElementById("navbarNav");
+  if (navbarCollapse.classList.contains("show")) {
+    const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
+    if (collapseInstance) {
+      collapseInstance.hide();
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -99,7 +103,7 @@ onMounted(() => {
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto gap-3">
           <li class="nav-item">
-            <router-link to="/" class="nav-link" active-class="active"
+            <router-link to="/" class="nav-link" active-class="active"  @click="closeNavbar"
               >Beranda</router-link
             >
           </li>
@@ -107,7 +111,7 @@ onMounted(() => {
             <router-link
               to="/formpengaduan"
               class="nav-link"
-              active-class="active"
+              active-class="active"  @click="closeNavbar"
               >Buat Pengaduan</router-link
             >
           </li>
@@ -115,7 +119,7 @@ onMounted(() => {
             <router-link
               to="/lacakpengaduan"
               class="nav-link"
-              active-class="active"
+              active-class="active"  @click="closeNavbar"
               >Lacak Pengaduan</router-link
             >
           </li>
@@ -123,7 +127,7 @@ onMounted(() => {
             <router-link
               to="/pusatbantuan"
               class="nav-link"
-              active-class="active"
+              active-class="active"  @click="closeNavbar"
               >Pusat Bantuan</router-link
             >
           </li>
