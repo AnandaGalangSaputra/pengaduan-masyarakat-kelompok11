@@ -1,7 +1,7 @@
 <template>
     <section>
         <div
-            class="kaki d-flex flex-row justify-content-between align-items-center p-3"
+            class="kaki d-flex flex-row justify-content-between align-items-center px-5 p-3"
         >
             <div>
                 <p class="text-white">
