@@ -1,35 +1,55 @@
 <template>
-    <section>
-        <div
-            class="kaki d-flex flex-row justify-content-between align-items-center px-5 p-3"
-        >
-            <div>
-                <p class="text-white">
-                    <strong>Pengaduan masyarakat</strong> Copyright © 2025, All Rights Reserved.
-                </p>
-            </div>
-            <div class="d-flex gap-5">
-                <div>
-                    <p class="text-white">Privacy Policy</p>
-                </div>
-                <div>
-                    <p class="text-white">Terms</p>
-                </div>
-                <div>
-                    <p class="text-white">Do not sell or share my personal information</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer class="footer text-white py-4">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap footer-container">
+      <div class="footer-copy fw-bold text-start order-2 order-md-1">
+        Pengaduan masyarakat © 2025
+      </div>
+      <div class="footer-menu d-flex flex-wrap justify-content-end order-1 order-md-2">
+        <a href="#" class="text-white text-decoration-none mx-2">Privacy Policy</a>
+        <a href="#" class="text-white text-decoration-none mx-2">Terms</a>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
-.kaki {
-    background-color: var(--nav-color);
-    font-size: 15px;
-    height: 70px;
+.footer {
+  background-color: #4f3cc9;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
-.kaki p {
-    margin: 0;
+
+.footer-menu a {
+  transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+  text-decoration: underline;
+  color: #ddd;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-menu {
+    justify-content: center;
+  }
+
+  .footer-copy {
+    text-align: center;
+  }
 }
 </style>

@@ -46,10 +46,15 @@
       </div>
     </div>
   </section>
+  <FooterBlue />
 </template>
 
 <script>
+import FooterBlue from '@/components/FooterBlue.vue';
 export default {
+    components: {
+        FooterBlue
+    },
   data() {
     return { email: '', nama: '', pesan: '' };
   },

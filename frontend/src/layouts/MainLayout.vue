@@ -46,16 +46,16 @@ const closeNavbar = () => {
 }
 
 .navbar .nav-link {
-  color: rgba(255, 255, 255, 0.7); /* Teks sedikit pudar saat tidak aktif */
-  transition: color 0.3s ease, font-weight 0.3s ease; /* Animasi perubahan warna dan ketebalan */
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .navbar .nav-link.active {
-  color: white !important; /* Teks putih dan tebal saat halaman aktif */
+  color: white !important;
 }
 
 .navbar .nav-link:hover {
-  color: white; /* Teks menjadi putih saat di-hover */
+  color: white;
 }
 
 .navbar-toggler:hover {
