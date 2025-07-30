@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kategori_Pengaduan;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 use App\Models\Pengaduan;
 use App\Models\TelegramUser;
@@ -89,7 +89,7 @@ class PengaduanController extends Controller
 
     public function getKategori()
     {
-        $kategori = Kategori_Pengaduan::all();
+        $kategori = Kategori::all();
         return response()->json($kategori);
     }
 
