@@ -1,11 +1,26 @@
 <script setup>
-import { RouterLink, RouterView, useRouter } from "vue-router";
+import { RouterLink, RouterView } from "vue-router";
 import loginButton from "@/components/WhiteButtonOutline.vue";
-import { ref, onMounted, nextTick } from "vue";
-
+import { ref, onMounted } from "vue";
+import { onBeforeUnmount } from "vue";
 const lastScrollPosition = ref(0);
 const isNavbarVisible = ref(true);
 const navbar = ref(null);
+const navbarContainer = ref(null);
+// Untuk toggle hamburger menu
+const isNavOpen = ref(false);
+const handleClickOutside = (event) => {
+  if (isNavOpen.value && navbarContainer.value && !navbarContainer.value.contains(event.target)) {
+    closeNavbar();
+  }
+};
+const toggleNavbar = () => {
+  isNavOpen.value = !isNavOpen.value;
+};
+
+const closeNavbar = () => {
+  isNavOpen.value = false;
+};
 
 onMounted(() => {
   window.addEventListener("scroll", () => {
@@ -13,7 +28,6 @@ onMounted(() => {
       window.pageYOffset || document.documentElement.scrollTop;
 
     if (currentScrollPosition < 0) return;
-
     if (Math.abs(currentScrollPosition - lastScrollPosition.value) < 60) return;
 
     isNavbarVisible.value = currentScrollPosition < lastScrollPosition.value;
@@ -27,18 +41,65 @@ onMounted(() => {
       navbar.value.style.transition = "transform 0.8s";
     }
   });
+  document.addEventListener("click", handleClickOutside);
 });
 
-const closeNavbar = () => {
-  const navbarCollapse = document.getElementById("navbarNav");
-  if (navbarCollapse.classList.contains("show")) {
-    const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
-    if (collapseInstance) {
-      collapseInstance.hide();
-    }
-  }
-};
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
 </script>
+
+<template>
+  <nav ref="navbarContainer" class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top" id="navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img
+          src="../assets/Images/logo.png"
+          alt="logo"
+          style="width: 40px; height: 40px"
+        />
+        <router-link
+          to="/"
+          class="text-decoration-none text-light fw-bold fst-italic d-flex flex-column flex-lg-row"
+          style="line-height: 1.2"
+        >
+          <span class="me-lg-1">Pengaduan</span>
+          <span>Masyarakat</span>
+        </router-link>
+      </a>
+
+      <!-- Toggle button manual -->
+      <button
+        class="navbar-toggler border-0 hoverable"
+        type="button"
+        aria-label="Toggle navigation"
+        @click="toggleNavbar"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Manual collapse using class binding -->
+      <div :class="['collapse navbar-collapse', { show: isNavOpen }]">
+        <ul class="navbar-nav ms-auto gap-3">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link" active-class="active" @click="closeNavbar">Beranda</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/formpengaduan" class="nav-link" active-class="active" @click="closeNavbar">Buat Pengaduan</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/lacakpengaduan" class="nav-link" active-class="active" @click="closeNavbar">Lacak Pengaduan</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/pusatbantuan" class="nav-link" active-class="active" @click="closeNavbar">Pusat Bantuan</router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <router-view></router-view>
+</template>
 
 <style scoped>
 .navbar {
@@ -66,74 +127,3 @@ const closeNavbar = () => {
   border: none;
 }
 </style>
-
-<template>
-  <nav
-    class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top"
-    id="navbar"
-  >
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <img
-          src="../assets/Images/logo.png"
-          alt="logo"
-          style="width: 40px; height: 40px"
-        />
-
-        <router-link
-          to="/"
-          class="text-decoration-none text-light fw-bold fst-italic d-flex flex-column flex-lg-row"
-          style="line-height: 1.2"
-        >
-          <span class="me-lg-1">Pengaduan</span>
-          <span>Masyarakat</span>
-        </router-link>
-      </a>
-      <button
-        class="navbar-toggler border-0 hoverable"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto gap-3">
-          <li class="nav-item">
-            <router-link to="/" class="nav-link" active-class="active"  @click="closeNavbar"
-              >Beranda</router-link
-            >
-          </li>
-          <li class="nav-item">
-            <router-link
-              to="/formpengaduan"
-              class="nav-link"
-              active-class="active"  @click="closeNavbar"
-              >Buat Pengaduan</router-link
-            >
-          </li>
-          <li class="nav-item">
-            <router-link
-              to="/lacakpengaduan"
-              class="nav-link"
-              active-class="active"  @click="closeNavbar"
-              >Lacak Pengaduan</router-link
-            >
-          </li>
-          <li class="nav-item">
-            <router-link
-              to="/pusatbantuan"
-              class="nav-link"
-              active-class="active"  @click="closeNavbar"
-              >Pusat Bantuan</router-link
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <router-view></router-view>
-</template>

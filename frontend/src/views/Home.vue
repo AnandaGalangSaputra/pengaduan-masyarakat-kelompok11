@@ -145,7 +145,7 @@ export default {
 }
 </style>
 
-<template>
+<template class="overflow-y-hidden">
     <section class="hero-section min-vh-100 d-flex align-items-center">
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center">
