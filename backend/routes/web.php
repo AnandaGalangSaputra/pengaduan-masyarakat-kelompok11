@@ -30,3 +30,7 @@ Route::get('/riwayat-pengaduan', [PengaduanMasukController::class, 'riwayatPenga
 
 Route::get('/analisis-aduan/cetak', [PengaduanMasukController::class, 'cetakAnalisis'])
      ->name('analisis.cetak');
+
+// Kategori Pengaduan
+Route::resource('kategori', \App\Http\Controllers\KategoriController::class);
+
