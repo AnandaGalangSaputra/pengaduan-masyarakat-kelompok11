@@ -14,7 +14,13 @@
             <input type="text" name="nama_kategori" class="form-control" value="{{ old('nama_kategori', $kategori->nama_kategori) }}" required>
         </div>
 
-       
+        <div class="mb-3">
+            <label for="deskripsi" class="form-label">Deskripsi</label>
+            <textarea name="deskripsi" class="form-control">{{ old('deskripsi', $kategori->deskripsi) }}</textarea>
+        </div>
+
+        <button class="btn btn-primary">Update</button>
+        <a href="{{ route('kategori.index') }}" class="btn btn-secondary">Kembali</a>
     </form>
 </div>
 @endsection
