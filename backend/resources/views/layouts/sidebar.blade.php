@@ -92,11 +92,15 @@
             <i class="fas fa-fw fa-users"></i>
             <span>Manajemen Pengguna</span></a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="charts.html"> 
+<li class="nav-item">
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit" class="nav-link btn btn-link" style="border: none; background: none; cursor: pointer;">
             <i class="fas fa-fw fa-sign-out-alt"></i>
-            <span>Logout</span></a>
-    </li>
+            <span>Logout</span>
+        </button>
+    </form>
+</li>
 
 
 
