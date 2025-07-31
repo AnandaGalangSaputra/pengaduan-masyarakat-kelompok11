@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PengaduanMasukController;
@@ -33,4 +34,7 @@ Route::get('/analisis-aduan/cetak', [PengaduanMasukController::class, 'cetakAnal
 
 // Kategori Pengaduan
 Route::resource('kategori', \App\Http\Controllers\KategoriController::class);
+
+Route::resource('users', UserController::class);
+Route::delete('users/bulk-delete', [UserController::class, 'bulkDelete'])->name('users.bulkDelete');
 
