@@ -42,7 +42,7 @@
             </table>
 
             <div class="mt-3">
-                {{ $kategoris->links() }}
+                {{-- {{ $kategoris->links() }} --}}
             </div>
         </div>
     </div>

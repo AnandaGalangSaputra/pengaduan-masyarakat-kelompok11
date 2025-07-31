@@ -83,7 +83,7 @@
             <span>Riwayat Pengaduan</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="{{ route('kategori.index')}}">
             <i class="fas fa-fw fa-list"></i>
             <span>Kategori Pengaduan</span></a>
     </li>
