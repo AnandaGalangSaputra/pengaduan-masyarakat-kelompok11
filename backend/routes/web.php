@@ -1,32 +1,35 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PengaduanMasukController;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes (Simple Version)
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
 */
 
-// Route Login
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
-Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+// ========== AUTH (GUEST) ==========
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 
-// Route Logout
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+    Route::post('/register', [AuthController::class, 'register'])->name('register.post');
+});
 
-// Semua route berikut hanya bisa diakses setelah login
+// ========== LOGOUT ==========
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+
+// ========== SETELAH LOGIN ==========
 Route::middleware('auth')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+
+    // Pengaduan
     Route::get('/pengaduanmasuk', [PengaduanMasukController::class, 'index'])->name('pengaduan_masuk.index');
     Route::get('/pengaduan/{id}/cetak', [PengaduanMasukController::class, 'cetak'])->name('pengaduan.cetak');
     Route::get('/pengaduan/{id}', [PengaduanMasukController::class, 'show'])->name('pengaduan.show');
@@ -35,9 +38,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/pengaduan/{id}/tindak', [PengaduanMasukController::class, 'prosesTindak'])->name('pengaduan.prosesTindak');
     Route::get('/riwayat-pengaduan', [PengaduanMasukController::class, 'riwayatPengaduan'])->name('pengaduan.riwayatpengaduan');
     Route::get('/analisis-aduan/cetak', [PengaduanMasukController::class, 'cetakAnalisis'])->name('analisis.cetak');
-    Route::resource('kategori', \App\Http\Controllers\KategoriController::class);
+
+    // Master Data
+    Route::resource('kategori', KategoriController::class);
     Route::resource('users', UserController::class);
     Route::post('users/bulk-delete', [UserController::class, 'bulkDelete'])->name('users.bulkDelete');
 });
-
-
