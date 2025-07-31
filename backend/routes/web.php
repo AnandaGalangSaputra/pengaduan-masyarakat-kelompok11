@@ -36,5 +36,7 @@ Route::get('/analisis-aduan/cetak', [PengaduanMasukController::class, 'cetakAnal
 Route::resource('kategori', \App\Http\Controllers\KategoriController::class);
 
 Route::resource('users', UserController::class);
-Route::delete('users/bulk-delete', [UserController::class, 'bulkDelete'])->name('users.bulkDelete');
+// Route::delete('users/bulk-delete', [UserController::class, 'bulkDelete'])->name('users.bulkDelete');
+Route::post('users/bulk-delete', [UserController::class, 'bulkDelete'])->name('users.bulkDelete');
+
 

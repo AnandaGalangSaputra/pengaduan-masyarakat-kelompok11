@@ -54,8 +54,8 @@ class UserController extends Controller
             'password' => 'nullable|min:6'
         ]);
 
-        $data = $request->only(['nama','email','role','no_hp']);
-        if($request->filled('password')) {
+        $data = $request->only(['nama', 'email', 'role', 'no_hp']);
+        if ($request->filled('password')) {
             $data['password'] = Hash::make($request->password);
         }
         $user->update($data);
@@ -71,8 +71,12 @@ class UserController extends Controller
 
     public function bulkDelete(Request $request)
     {
-        $ids = $request->ids;
-        User::whereIn('id', $ids)->delete();
-        return redirect()->route('users.index')->with('success', 'Pengguna terpilih berhasil dihapus');
+        if (!$request->ids || !is_array($request->ids)) {
+            return response()->json(['status' => 'error', 'message' => 'Tidak ada pengguna yang dipilih!'], 400);
+        }
+
+        User::whereIn('id', $request->ids)->delete();
+        return response()->json(['status' => 'success', 'message' => 'Pengguna terpilih berhasil dihapus!']);
     }
+
 }
